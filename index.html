@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf8">
+	<title>start ajax</title>
+	<script src="jquery/jquery-2.2.4.min.js"></script>
+</head>
+<body>
+	<p id="content_p"> </p>
+	<form id="mail_send">
+		<input type="email" name="mail">
+		<button type="submit">Отправить</button>
+	</form>
+	<div class="someDiv"></div>
+	<script type="text/javascript">
+		$("#mail_send").submit(function() {
+			var str = $(this).serialize();
+			$.ajax({
+				type: "post",
+				url: "php/hello.php",
+				data: str,
+				success: function(html) {
+					$("#content_p").html(html);
+				}
+			});
+			return false;
+		}); 
+		/*
+		function showMyTime() {
+			$.ajax({
+				url: "php/time.php",
+				cache: false,
+				success: function(html) {
+					$("#content_p").html(html);
+				}
+			});
+		}
+		setInterval('showMyTime()', 1000);
+		*/
+	</script>
+</body>
+</html>
