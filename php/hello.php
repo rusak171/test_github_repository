@@ -1,4 +1,4 @@
 <?php
     echo "Вы указали почту <b>".$_POST["mail"]."</b>";
-    echo "current brach is new_f1";
+    echo "merged data from master and new_f1<br />";
 ?>
