@@ -1,2 +1,5 @@
-#project files
+# project files
 nbproject/
+
+# git files
+.gitignore
