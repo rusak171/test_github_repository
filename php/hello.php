@@ -1,4 +1,4 @@
 <?php
     echo "Вы указали почту <b>".$_POST["mail"]."</b>";
-    echo "result merge";
+    echo "this is branch new_f1";
 ?>
